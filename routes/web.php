@@ -17,5 +17,5 @@ Route::get('/', function () {
    Roles::create([
     'name' => "admin",
     'Description' => "Mon super admin"]);
-    return view('welcome');
+    return view('user');
 });
