@@ -18,6 +18,9 @@ class CreateEntreprisesTable extends Migration
             $table->string('nom');
             $table->string('localite');
             $table->string('domaine Activite');
+            $table->img('Logo');
+
+
             $table->timestamps();
         });
     }
