@@ -14,7 +14,7 @@ class EntrepriseController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -25,6 +25,7 @@ class EntrepriseController extends Controller
     public function create()
     {
         //
+
     }
 
     /**
@@ -35,7 +36,10 @@ class EntrepriseController extends Controller
      */
     public function store(Request $request)
     {
-
+        if ($request->hasFile('logo') && $request->file('logo') != null) {
+            $image_path = $request->file('logo')->store('logo/entreprises', 'public');
+            $data['logo'] = '/storage/'.$image_path;
+        }
     }
 
     /**
@@ -47,6 +51,7 @@ class EntrepriseController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
@@ -58,6 +63,7 @@ class EntrepriseController extends Controller
     public function edit($id)
     {
         //
+        
     }
 
     /**
