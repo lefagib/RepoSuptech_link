@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/user', function () {
    Roles::create([
     'name' => "admin",
     'Description' => "Mon super admin"]);
